@@ -206,8 +206,9 @@ public class Speedometer extends View {
         canvas.drawTextOnPath(message, path, 0f, 0f, readingPaint);
     }
 
-    public void onSpeedChanged(float newSpeedValue) {
+    public boolean onSpeedChanged(float newSpeedValue) {
         this.setCurrentSpeed(newSpeedValue);
         this.invalidate();
+        return false;
     }
 }
